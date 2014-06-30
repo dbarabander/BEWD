@@ -14,4 +14,62 @@
 # Use a loop, so that your program continues to ask a user for stories until they chose to quit. ("Would you like to add another story? Enter 'y' or 'n'")
 # Once the user is finished with entering their stories, use .each to print each story in the stories array. 
 #
+
+
+
+def get_input
+  #Get input from the user.
+  return gets.chomp
+end
+
+def calculate_upvotes(story)
+  upvotes = story[:upvotes]
+  category = story[:category]
+  puts "category is #{category}"
+  # Write code so that:
+  if category == 'cats' 
+    # If the Story is about cats multiply the upvotes by 5
+    return upvotes * 5
+  elsif category == 'bacon'
+    # If the Story is about bacon multiply the upvotes by 8
+    return upvotes * 8
+  elsif category == "food" # notice the lower case (see what happens when you enter a category with an upper case 'Food')
+   # If the Story is about Food it gets 3 times the upvotes.
+   puts "am I here?"
+   return upvotes * 3
+  else 
+    return upvotes
+  end
+  #For example:
+  # "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
+end
+
+def build_story(story, category)
+  {story: story, category: category, upvotes: 1} # popular ruby shorthand, since ruby always returns the last line of the funciton, its fairly popular to just put the expression of what you want to return.
+end
+
+def get_story
+  puts "Please enter a News story:"
+  s = get_input
+  puts "Please give it a category:"
+  c = get_input
+  return build_story(s, c) ## notice the same ruby shorthand of returing the last line. 
+end
+
+stories = Array.new
+
+puts "Welcome to Teddit! a text based news aggregator. Get today's news tomorrow!"
+
+continue = 'y'
+
+while continue.downcase == 'y' ## use downcase incase user entered with an upcase letter.
+  stories << get_story
+  puts "Would you like to add another story (y or n): "
+  continue = get_input
+end
+
+stories.each do |story|
+  upvotes = calculate_upvotes(story)
+  puts "New story added! #{story[:story]}, Category: #{story[:category].capitalize}, Current Upvotes: #{upvotes}"
+end
 #
