@@ -29,7 +29,7 @@ For each lesson the instructor will post slides, exercises and, solution files. 
 
 From the terminal type: (first make sure you are in the correct directory, by using `cd ~/dev/BEWD_NYC_11/`)
 ```bash
-git pull upstream master
+git pull --rebase upstream master
 ```
 	
 ### How Do I Post Files To My Forked Repository on GitHub?
