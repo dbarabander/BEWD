@@ -1,4 +1,8 @@
 class SomeClass
+  def speak
+    "yolo"
+  end
+  
   def say_my_name
     puts "Say my name, say my name!"
   end
