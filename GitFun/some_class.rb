@@ -1,6 +1,6 @@
 class SomeClass
   def speak
-    "yolo"
+    puts "yolo"
   end
   
   def say_my_name
