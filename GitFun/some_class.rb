@@ -1,5 +1,5 @@
 class SomeClass
-  def speak
+  def yolo
     "yolo"
   end
   
