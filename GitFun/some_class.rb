@@ -1,5 +1,7 @@
 class SomeClass
   def speak
+    puts "YOLO!"
+    
     puts "yolo"
   end
   
