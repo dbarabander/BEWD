@@ -1,4 +1,8 @@
 class SomeClass
+  def bla
+    "bla"
+  end
+  
   def yolo
     puts "yolo, yolo!"
   end
