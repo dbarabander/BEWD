@@ -189,11 +189,11 @@ class.
 
 	module Upvotable
 		def upvote!
-  		@upvote += 1
+  		@upvotes += 1
   	end
 
   	def downvote!
-  		@upvote -= 1
+  		@upvotes -= 1
   	end
 	end
 
@@ -232,7 +232,7 @@ class.
 ###Modules
 
 *	What if we wanted to have two bat classes.
-
+```
 		class Bat
 			def fly!
 				puts "So free.. and blind"
@@ -248,7 +248,7 @@ class.
 
 		slugger = Bat.new
 		slugger.fly?!??!
-
+```
 ---
 
 ##Inheritance vs Mixins
