@@ -174,7 +174,9 @@ Controllers:
 
 ## Homework
 
-Final project proposal due lesson 9.
+[Final project proposal due lesson 9]
+(https://github.com/ga-students/bewd_11_nyc_homework/tree/master/final_project)
+
 
 ---
 

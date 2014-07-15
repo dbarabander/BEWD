@@ -29,7 +29,7 @@
 
 ###Homework
 
-Final project proposal
+[Final project proposal](https://github.com/ga-students/bewd_11_nyc_homework/tree/master/final_project)
 
 
 ### What's Due?
