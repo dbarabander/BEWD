@@ -19,4 +19,8 @@ class Building
   def to_s
     "Building #{name} at #{address} has #{@apartments.count} apartments."
   end
+
+  def add_apartment(apartment)
+    apartments << apartment
+  end
 end

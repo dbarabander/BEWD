@@ -1,3 +1,18 @@
-<%= form_tag stories_path, method: 'get' do%>
-  <%= text_field_tag 'q', nil, placeholder: 'Search for a story'%>
-<%end%>
+<%= form_for @story do |f| %>
+  <fieldset>
+    <legend>Story</legend>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :link %>
+      <%= f.text_field :link %>
+    </div>
+    <div>
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+    </div>
+  </fieldset>
+  <%= f.submit %>
+<% end %>

@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'stories/form'%>
-<%= yield %>
+
+<%= render 'stories/search'%>
+<%= link_to 'Add new story', new_story_path%>
+<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+
 
 </body>
 </html>

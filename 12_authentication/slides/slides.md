@@ -152,90 +152,43 @@ Creating authentication from scratch is a complex process (see resources for mor
 
 
 ##Authentication
-###Devise GEM
-[https://github.com/plataformatec/devise](https://github.com/plataformatec/devise)
+###Do it ourselves!
 
-*	Straight-forward to implement, integrate and customize.
-*	Handles complex security, so you don't have to.
-*	Provides controller filters and view helpers (more on that in the code along).
-* 	Recently updated (v3.0.0) with Rails 4 support!
-
+*	More "by hand," but that's how we learn!
+* Eventually we'd use the devise gem. 
 
 ---
 
+## What's the architecture
+
+* User model in the database has a username and a hashed password. 
+* There's a session controller which has several actions that handle various authentication tasks
+* THere's a "log in" view, which is a form, that submits username and password. 
+
+---
+
+## How do we authenticate/keep track of logged in users? 
+
+1. User clicks submit on a login form. 
+1. Send the username/password as a POST the the `create` action of the `sessions` controller. 
+1. Search the database for a username and hashed password. 
+1. If a user is found put the user_id in the session. 
+1. On subsequent requests, the cookie will identify the users session. The user ID will be in the session. 
+
+---
 
 
 <img id ='icon' src="../../assets/ICL_icons/Code_along_icon_md.png">
-##Rewsly - Adding Devise
+
+##Rewsly - Adding Auth
 
 ---
 
+## Pair and share!
 
-##Devise
-###Recap
+* Pull down the Rewsly code, and spend a few minutes digesting how it works. 
+* Find a partner and spend 10 minutes talking about how authentication works. 
 
-*	Adding Devise Gem to the Gemfile
-
-		gem 'devise', '~> 3.0.0'
-
----
-
-
-##Devise
-###Recap
-
-*	Using Devise
-
-		rails g devise:install # creates all the devise Controllers, views and initializers
-		rails g devise user    # creates User model (or modifies it if it exists)
-		rake db:migrate        # Let's Go!
-
-
----
-
-
-##Devise
-###Recap
-
-*	View helpers
-
-		<%= user_is_logged_in? %>
-		<%= current_user %>
-
----
-
-
-##Authentication
-###Recap
-
-*	View helpers
-
-		<%= user_is_logged_in? %>
-		<%= current_user %>
-
----
-
-##Devise
-###Recap
-
-*	Blocking Access
-
-		class ApplicationController ...
-			before_action :authenticate_user!
-		end
-
-		class HomeController < ApplicationController
-			skip_before_action :authenticate_user!
-		end
-
----
-
-##Devise
-###Recap
-
-*	Changing the default Route names
-
-		devise_for :users, :path_names => { sign_in: 'login', sign_out: 'logout' }
 
 ---
 

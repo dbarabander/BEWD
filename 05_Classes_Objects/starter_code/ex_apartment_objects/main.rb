@@ -64,9 +64,9 @@ building = create_building
 puts "How many units are there?"
 apt_count = gets.to_i
 
- 0.upto(apt_count - 1) do |unit|
+ apt_count.times do
   apartment = create_apartment
-  building.apartments[unit] = apartment
+  building.add_apartment(apartment)
 
   puts "Apartment added successfully \n #{apartment}"
 
