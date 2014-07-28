@@ -65,6 +65,12 @@ You always need at least the following:
 * What else?
 
 ---
+=======
+Instructors, you know your class best. What do your students need to review?
+
+---
+
+
 
 <img id ='icon' src="../../assets/ICL_icons/Exercise_icon_md.png">
 ##Lab Time

@@ -1,0 +1,13 @@
+<h1>Search for a shirt!</h1>
+<%= render 'search' %>
+
+
+<% @shirts.each do |shirt|%>
+<section>
+
+  <h3><%=link_to shirt.name, shirt_path(shirt.id)%></h3>
+  <p> <%=shirt.description%><%=link_to 'Edit', edit_shirt_path(shirt)%></p>
+  <p><%= image_tag shirt.image%></p>
+</section>
+
+<%end%>
