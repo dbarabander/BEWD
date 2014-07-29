@@ -7,7 +7,7 @@
 
 ###Task Instructions
 
-We are going to add authentication to Ritly using Devise.
+We are going to add authentication to Ritly using code from Rewsly.
 
 Here is the functionality we need to add this lesson.
 
