@@ -10,7 +10,7 @@
 ##Agenda
 
 * Testing, what is it? 
-* Code along, do it (Rewlsy)! 
+* Code along, do it (Ritly)! 
 * Lab, you do it (Ritly)! 
   
 
@@ -71,7 +71,7 @@ assert_equal 4, answer
 ---
 
 <img id ='icon' src="../../assets/ICL_icons/Code_along_icon_md.png">
-##Rewlsy Tests
+##Ritly Tests
 
 ---
 
@@ -100,8 +100,9 @@ assert_equal 4, answer
 
 ###Tips, Tricks & Advanced Reading
 * [rSpec](http://rspec.info)
-* [rSpec Rails] (https://github.com/rspec/rspec-rails)
-* [Better Specs--Great resource on style] (http://betterspecs.org)
+* [rSpec Rails](https://github.com/rspec/rspec-rails)
+* [Feature specs](https://www.relishapp.com/rspec/rspec-rails/v/3-0/docs/feature-specs/feature-spec)
+* [Better Specs--Great resource on style](http://betterspecs.org)
 * [TDD](http://www.agiledata.org/essays/tdd.html)
 * The glory of Continuous Integration: [CI](http://martinfowler.com/articles/continuousIntegration.html)
 

@@ -13,7 +13,7 @@
 ### Schedule 
 * Review Authentication: Q&A 
 * Overview of testing. 
-* Code along. Add tests to Rewlsy 
+* Code along. Add tests to Ritly
 * Lab. 
 
 
