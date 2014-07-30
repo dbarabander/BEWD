@@ -100,7 +100,7 @@ assert_equal 4, answer
 
 ###Tips, Tricks & Advanced Reading
 * [rSpec](http://rspec.info)
-* [rSpec Rails](https://github.com/rspec/rspec-rails)
+* [rSpec Rails]f(https://github.com/rspec/rspec-rails)
 * [Feature specs](https://www.relishapp.com/rspec/rspec-rails/v/3-0/docs/feature-specs/feature-spec)
 * [Better Specs--Great resource on style](http://betterspecs.org)
 * [TDD](http://www.agiledata.org/essays/tdd.html)
