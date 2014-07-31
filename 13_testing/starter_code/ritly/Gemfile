@@ -33,8 +33,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test do 
-  gem 'capybara'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'capybara', '~>2.2.0'
 end
 
 # Use ActiveModel has_secure_password
