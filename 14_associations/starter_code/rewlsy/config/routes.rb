@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'stories#index'
 
-  resources :stories
+  resources :stories do
+      resources :comments, only: :create
+  end
+  
   resources :sessions, only: [:new, :create]
   get '/logout', to: "sessions#destroy", as: 'logout'
   

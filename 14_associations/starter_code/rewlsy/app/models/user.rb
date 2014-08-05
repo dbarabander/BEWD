@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :stories
+  has_many :comments
+
+
   validates :username, :password, presence: true
   validates :username, uniqueness: true
 
