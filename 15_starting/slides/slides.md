@@ -14,7 +14,7 @@
 *	User Stories
 *	Wireframes / Paper Prototype
 *	User Testing
-*	Database Schema
+*	Datamodel
 
 ---
 
