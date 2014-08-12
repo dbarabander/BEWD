@@ -5,4 +5,5 @@ Ritly::Application.routes.draw do
 
   get '/:code', to: 'urls#redirector'
   get '/:code/preview', to: 'urls#preview'
+
 end

@@ -6,8 +6,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
   def current_user
-    return nil unless session[:user_id].present? 
-    User.find_by id:session[:user_id]
+    if session[:user_id].present? #if they were logged in they would have the value stored in sessinos
+      User.find(session[:user_id]) #This is where they interact, sesisons and our database
+    else
+      nil
+    end
   end
 
   def logged_in?
@@ -15,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user!
-    unless logged_in?
+    if !logged_in?
       flash[:error] = "Sorry you must be logged in to do this..."
       redirect_to new_session_path
     end

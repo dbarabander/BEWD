@@ -30,6 +30,9 @@ RSpec.describe User, :type => :model do
     it "requires username and password" do
       user = User.new(username: 'bla', password: 'bla')
       expect(user).to be_valid
+
+      user = User.new(username: 'bla', password: 'bla')
+      expect(user.count).to eq 1
     end
   end
 

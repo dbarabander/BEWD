@@ -4,14 +4,12 @@ class UrlsController < ApplicationController
   end
 
   def create
-    safe_url_params = params.require(:url).permit(:link)
-    @url = Url.new safe_url_params
-    @url.hash_code = rand(1..1000000)
+    
+    Url.create_url(params_secure)
+
 
     # For the bonus
     # @url.hash_code = SecureRandom.urlsafe_base64(8)
-
-    @url.save
 
     # Or create it in one shot by merging the random parameter into the safe params hash
     # @url = Url.create safe_url_params.merge(hash_code: SecureRandom.urlsafe_base64(8))
@@ -38,4 +36,10 @@ class UrlsController < ApplicationController
       redirect_to root_path
     end
   end
+
+private 
+  def params_secure
+  params.require(:url).permit(:link)
+end
+
 end

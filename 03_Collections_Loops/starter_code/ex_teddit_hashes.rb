@@ -14,6 +14,23 @@
 # Use a loop, so that your program continues to ask a user for stories until they chose to quit. ("Would you like to add another story? Enter 'y' or 'n'")
 # Once the user is finished with entering their stories, use .each to print each story in the stories array. 
 #
+<<<<<<< HEAD
+#
+
+require 'pry'
+
+def get_input
+    
+  #Get input from the user.
+  return gets.chomp
+
+end
+
+def calculate_upvotes(story, category)
+  upvotes = 1
+	# Write code so that:
+	if category == 'cats' 
+=======
 
 
 
@@ -28,19 +45,79 @@ def calculate_upvotes(story)
   puts "category is #{category}"
   # Write code so that:
   if category == 'cats' 
+>>>>>>> a03110c7f26d4b446188ede5aa2561478634462f
     # If the Story is about cats multiply the upvotes by 5
     return upvotes * 5
   elsif category == 'bacon'
     # If the Story is about bacon multiply the upvotes by 8
     return upvotes * 8
+<<<<<<< HEAD
+
+  elsif category == "food" # notice the lower case (see what happens when you enter a category with an upper case 'Food')
+	 # If the Story is about Food it gets 3 times the upvotes.
+=======
   elsif category == "food" # notice the lower case (see what happens when you enter a category with an upper case 'Food')
    # If the Story is about Food it gets 3 times the upvotes.
    puts "am I here?"
+>>>>>>> a03110c7f26d4b446188ede5aa2561478634462f
    return upvotes * 3
   else 
     return upvotes
   end
   #For example:
+<<<<<<< HEAD
+	# "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
+end
+
+
+def question
+	puts "Welcome to Teddit! a text based news aggregator. Get today's news tomorrow!"
+		puts "Please enter a News story:"
+		story = get_input
+		puts "Please give it a category:"
+		category = get_input
+		upvotes = calculate_upvotes(story, category)
+		arraything(story,category,upvotes)
+end
+
+
+
+@anotherstory == 'y'
+@stories = []
+
+def arraything(story, category, upvotes)
+			storyhash = {storytitle: story, storycategory: category, storyupvotes: upvotes}
+			@stories << storyhash
+			binding.pry
+			puts @stories.join(",")
+			binding.pry
+			puts "Would you like to add another story? Enter 'y' or 'n'"
+			anotherstory = gets.chomp
+		
+		if anotherstory == 'y'
+			question
+		else
+			puts @stories
+			binding.pry
+			# stories.each { |story|
+			# puts story}
+		end
+
+end
+
+# h.each do |key, value|
+#   puts key
+#   value.each do |k,v|
+#     puts k
+#     puts v
+#   end
+# end
+
+
+question()
+
+
+=======
   # "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
 end
 
@@ -73,3 +150,4 @@ stories.each do |story|
   puts "New story added! #{story[:story]}, Category: #{story[:category].capitalize}, Current Upvotes: #{upvotes}"
 end
 #
+>>>>>>> a03110c7f26d4b446188ede5aa2561478634462f

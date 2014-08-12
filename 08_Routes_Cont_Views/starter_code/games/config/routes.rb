@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
+ 
+
+  #which controller do i need to send the visitor to
   root 'games#index'
   get '/games' => "games#index"
   
   resources :secret_numbers, :only => [:new, :show]
-  get '/secret_numbers', to: 'secret_numbers#new'
+  get '/secret_numbers' => "secret_numbers#new"
+
+  
+
+
+  # resources :roshambos, :only => [:new, :show]
+  # get '/roshambo' => 'roshambos#new'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,12 @@
+<h1> Hello! Welcome to T-Shirt Factory!</h1>
+<%=form_tag method: 'get' do%>
+	<%= label_tag(:q, "Search for:")%>
+	<%= text_field_tag(:q)%>
+	<%= submit_tag("Search") %>
+<%end%>
+
+<% @shirts.each do |shirt|%>
+	<h3><%=shirt.name%></h3>
+	<p><%=shirt.description%></p>
+	<p><%= image_tag shirt.image%></p>
+<%end%>

@@ -4,36 +4,72 @@
 # Complete the application below. 
 # Where you see comments (lines that begin with #) replace it with code so that the program works.
 
-def get_input
-    
-  #Get input from the user.
-  return gets.chomp
+
+
+# def get_input
+# gets.chomp
+# end
+
+require 'pry'
+
+@valarray = Array.new
+@wordarray = Array.new
+@upvotes = 0
+
+def get_words()
+	puts "Enter a word. If you're done entering words, put a '_' "
+	word = gets.downcase.chomp
+	
+	if word != "_"
+		@wordarray << word
+ 		puts "What else?"
+ 		get_words
+
+ 	else
+ 		get_values
+ 	end
+
 end
 
-def calculate_upvotes(story, category)
-  upvotes = 1
-	# Write code so that:
-	if category == 'cats' 
-    # If the Story is about cats multiply the upvotes by 5
-    return upvotes * 5
-  elsif category == 'bacon'
-    # If the Story is about bacon multiply the upvotes by 8
-    return upvotes * 8
-		
-  elsif category == "food" # notice the lower case (see what happens when you enter a category with an upper case 'Food')
-	 # If the Story is about Food it gets 3 times the upvotes.
-   return upvotes * 3
-  else 
-    return upvotes
-  end
-  #For example:
-	# "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
+def get_values()
+	@wordarray.length.times {
+	puts "Enter a value for your words, in order:"
+	value = gets.to_i
+	@valarray << value	
+	}
+	get_phrase
 end
 
-puts "Welcome to Teddit! a text based news aggregator. Get today's news tomorrow!"
-puts "Please enter a News story:"
-story = get_input
-puts "Please give it a category:"
-category = get_input
-upvotes = calculate_upvotes(story, category)
-puts "New story added! #{story}, Category: #{category.capitalize}, Current Upvotes: #{upvotes}"
+def calculate_upvotes(phrase)
+	if @wordarray.any?{
+		|w| phrase[w] } #not sure what exactly this means 
+			@valarray.each { |val|
+				@upvotes += val
+			} 
+	end
+end
+
+def get_phrase()
+	puts "Enter a phrase:"
+	phrase = gets.downcase.chomp
+	calculate_upvotes(phrase)
+	puts "New story added! #{phrase}, Current Upvotes: #{@upvotes}"
+end	
+
+get_words
+
+
+# calculate_upvotes
+
+# 	calculate_upvotes
+
+# puts "Welcome to Teddit! a text based news aggregator. Get today's news tomorrow!"
+# puts "Please enter a News story:"
+# story = get_input
+# puts "Please give it a category:"
+# category = get_input
+# upvotes = calculate_upvotes(story, category)
+# puts "New story added! #{story}, Category: #{category.capitalize}, Current Upvotes: #{upvotes}"
+
+
+	

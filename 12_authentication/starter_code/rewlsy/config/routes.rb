@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+  match '/signup', to: 'users#new', via:'get'
+  resources :users
   root 'stories#index'
 
   resources :stories
+  # GET /stories -> StoryController#index
+  # GET /stories/:id -> StoryController#show
+  # GET /stories/new -> StoryController#new
+  # POST /stories -> StoryController#create
   resources :sessions, only: [:new, :create]
+  #GET /sessions/new --> SessionsController#new
+  #POST /sessions --> SessionsController#creat t diffe
   get '/logout', to: "sessions#destroy", as: 'logout'
   
   # The priority is based upon order of creation: first created -> highest priority.

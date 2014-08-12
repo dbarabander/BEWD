@@ -1,15 +1,25 @@
-<h1>Welcome to RetFlix! See our collection of movies below).</h1>
+<h1>Welcome to RetFlix! See our collection of movies below.</h1>
 
+<%=form_tag "/movies", method: 'get' do%>
+  <%= label_tag(:q, "Search for:")%>
+  <%= text_field_tag(:q)%>
+  <%= submit_tag("Search") %>
+
+<%end%>
 <table>
   <tr>
     <th>Title</th>
     <th>Description</th>
   </tr>
-  <%@movies.each do |movie| %>
+  <% @movies.each do |movie| %>
   <tr>
     <td><%="#{movie.title}(#{movie.year_released})"%></td>
     <td><%=movie.description%></td>
+    <td><%=link_to 'Edit', edit_movie_path(movie)%></td>
+    <td><%=link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }%></td>
   </tr>
+
   <%end%>
+   <%= link_to 'New Movie', new_movie_path %>
 </table>
 

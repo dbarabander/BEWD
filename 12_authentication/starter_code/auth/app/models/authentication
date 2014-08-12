@@ -1,0 +1,11 @@
+authentication:
+requires a new view
+
+new sessions controller using generate command
+
+create "new view" user model
+
+put actions in the sessions controller
+
+put helpers in the applications controller
+

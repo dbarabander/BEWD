@@ -1,5 +1,6 @@
 class StoriesController < ApplicationController
-  before_filter :authenticate_user!, only: [:new, :create]
+  before_filter :authenticate_user!, only: [:new, :create] #THIS IS WHAT CHECKS THE STATE
+
   def index
     @stories = Story.search(params[:q])
   end
@@ -22,5 +23,4 @@ class StoriesController < ApplicationController
   def show
     @story = Story.find params[:id]
   end
-
 end

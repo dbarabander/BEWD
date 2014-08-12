@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <h1><%= @story.title %> -  <%= "Posted by #{@story.user.username}" if @story.user.present?%></h1>
+=======
+<h1><%= @story.title %> -Posted by <%=@story.user.username if @story.user.present?%></h1>
+>>>>>>> 7c2c1aa465733377ee3216fec5068355cdabc0e6
 <p><%= link_to @story.link, @story.link %>
 <p><%= link_to "Back to home page", root_path %></p>
 

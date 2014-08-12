@@ -1,0 +1,25 @@
+<h1> Make a new user! </h1>
+<%= form_for @user do |f| %>
+<fieldset>
+  <div class='fields'>
+    <%=f.label :email %>
+    <%=f.text_field :email%>
+  </div>
+  <div class='fields'>
+    <%=f.label :username %>
+    <%=f.text_field :username%>
+  </div>
+  <div class='fields'>
+    <%=f.label :password %>
+    <%=f.password_field :password %>
+  </div>
+
+   <div class='fields'>
+    <%=f.label :password_confirmation %>
+    <%=f.password_field :password_confirmation%>
+  </div>
+
+</fieldset>
+<%= f.submit %>
+
+<%end%>

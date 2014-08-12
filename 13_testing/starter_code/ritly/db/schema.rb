@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140730230845) do
+=======
 ActiveRecord::Schema.define(version: 20140730230429) do
+>>>>>>> a2e8ba2514ae07e7de33e7a30bba8b204cebd094
 
   create_table "urls", force: true do |t|
     t.string   "link"
@@ -21,7 +25,11 @@ ActiveRecord::Schema.define(version: 20140730230429) do
   end
 
   create_table "users", force: true do |t|
+<<<<<<< HEAD
+    t.string   "usernmae"
+=======
     t.string   "username"
+>>>>>>> a2e8ba2514ae07e7de33e7a30bba8b204cebd094
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"

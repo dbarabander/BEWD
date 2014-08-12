@@ -12,6 +12,19 @@
 # No more bottles of beer on the wall :-(
 
 
+<<<<<<< HEAD
+
+count = 99
+puts "#{count} bottles of beer on the wall, #{count} bottles of beer"
+
+while count >0
+	count -= 1
+	puts "take one down, pass it around, #{count} bottles of beer on the wall"
+	end
+if count = 0 
+	puts "no more bottles of beer on the wall"
+end
+=======
 99.downto(1) do |bottles| 
   puts "#{bottles} bottles of beer on the wall
         #{bottles} bottles of beer!
@@ -22,3 +35,4 @@
     puts "No more bottles of beer on the wall :-("
   end
 end
+>>>>>>> a03110c7f26d4b446188ede5aa2561478634462f
